@@ -94,7 +94,7 @@ const Footer = () => {
                   href="mailto:info@serendipkorea.org"
                   className="text-gray-300 hover:text-primary transition duration-300"
                 >
-                  info@serendipkorea.org
+                  2025serendip@gmail.com
                 </a>
               </div>
               <div className="flex items-start">
@@ -109,7 +109,7 @@ const Footer = () => {
                     clipRule="evenodd"
                   />
                 </svg>
-                <span className="text-gray-300">서울, 대한민국</span>
+                <span className="text-gray-300">광주, 대한민국</span>
               </div>
             </div>
 
@@ -118,7 +118,7 @@ const Footer = () => {
               <h5 className="text-sm font-semibold mb-3">팔로우하기</h5>
               <div className="flex space-x-4">
                 <a
-                  href="#facebook"
+                  hidden href="#facebook"
                   className="text-gray-300 hover:text-primary transition duration-300"
                   aria-label="Facebook"
                 >
@@ -127,7 +127,7 @@ const Footer = () => {
                   </svg>
                 </a>
                 <a
-                  href="#instagram"
+                  href="https://www.instagram.com/se.rendip/"
                   className="text-gray-300 hover:text-primary transition duration-300"
                   aria-label="Instagram"
                 >
@@ -136,7 +136,7 @@ const Footer = () => {
                   </svg>
                 </a>
                 <a
-                  href="#linkedin"
+                  hidden href="#linkedin"
                   className="text-gray-300 hover:text-primary transition duration-300"
                   aria-label="LinkedIn"
                 >

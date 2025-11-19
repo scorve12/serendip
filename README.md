@@ -21,6 +21,38 @@ This project is a recreated version of the Serendip website featuring:
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## News 콘텐츠 운영 가이드
+
+Vercel에 배포된 현재 구조에서는 정적 파일만 수정하면 새 게시글이 반영되도록 구성되어 있습니다.
+
+1. 이미지 준비  
+   - 게시글마다 `public/news/{연도-월-슬러그}/` 폴더를 만든 뒤 1~5장의 이미지를 넣습니다.  
+   - 예) `public/news/2024-11-conference/main.jpg`. 파일명/폴더명은 소문자와 하이픈을 권장합니다.
+2. 뉴스 데이터 업데이트  
+   - `src/data/newsData.js`에서 배열에 새 객체를 추가합니다.
+   - 각 객체는 `id`, `date`, `title`, `summary`, `category`, `details`, `images`(배열) 필드를 가집니다.
+
+```js
+{
+  id: '2024-12-demo-day',
+  date: '2024년 12월',
+  title: '연말 데모데이 개최',
+  summary: '상위 10개 팀이 투자자 앞에서 피칭했습니다.',
+  category: '이벤트',
+  details: '행사 개요, 주요 수상 팀, 다음 일정 등을 서술하세요.',
+  images: [
+    { src: '/news/2024-12-demo-day/main.jpg', alt: '데모데이 메인 사진' },
+    { src: '/news/2024-12-demo-day/team-a.jpg', alt: '팀 A 발표 모습' },
+  ],
+}
+```
+
+3. 저장 및 배포  
+   - 변경 사항을 커밋 후 Git에 푸시하면 Vercel이 자동으로 재배포합니다.  
+   - 이미지 경로(`/news/...`)는 `public` 폴더 기준이므로 추가 설정 없이 곧바로 접근 가능합니다.
+
+필요 시 오래된 게시글은 배열에서 제거하거나 순서를 조정하면 됩니다.
+
 ## Available Scripts
 
 In the project directory, you can run:
